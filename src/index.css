@@ -3,6 +3,9 @@
 @tailwind utilities;
 
 :root {
+  --light-square: #f0d9b5;
+  --dark-square: #b58863;
+  --accent-color: #634320;
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
@@ -30,12 +33,18 @@
 .chess-piece.hidden {
   visibility: hidden;
 }
-
-
+.light-square{
+  background-color: var(--light-square);
+}
+.dark-square{
+  background-color: var(--dark-square);
+}
+.accent-color{
+  background-color: var(--accent-color);
+}
 .chess-board {
-  --light-square: #f0d9b5;
-  --dark-square: #b58863;
-  --accent-color: #634320;
+  height: 50vh;
+  width: 50vh;
   position: relative;
   z-index: 0; /* Establish a stacking context */
 }
@@ -80,10 +89,13 @@ a:hover {
 
 body {
   margin: 0;
+  background-color: var(--accent-color);
+  /* 
   display: flex;
   place-items: center;
   min-width: 320px;
-  min-height: 100vh;
+  min-height: 100vh; 
+  */
 }
 
 h1 {
