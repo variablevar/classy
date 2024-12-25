@@ -60,7 +60,6 @@ const ChessBoard: React.FC = () => {
   const [pieces, setPieces] = useState<any[][]>(initialBoard);
   const [theme, setTheme] = useState<ThemeName>('classic');
   const [draggedPiece, setDraggedPiece] = useState<{ from: string } | null>(null);
-  const [validMoveSpace, setValidMoveSpace] = useState([])
 
   useEffect(() => {
     const root = document.documentElement.style;    
@@ -72,14 +71,14 @@ const ChessBoard: React.FC = () => {
   }, [theme])
   
   function getValidMove(piece: Piece, position: string, pieces: any[][]) {
-    const [row, col] = getPositionFromBoard(position);
+    // const [row, col] = getPositionFromBoard(position);
     const [alpha, digit] = [position[0], parseInt(position[1])];
   
     const validMoves: string[] = [];
     
     // Helper function to check board bounds
-    const isWithinBounds = (row: number, col: number) =>
-      row >= 0 && row < 8 && col >= 0 && col < 8;
+    // const isWithinBounds = (row: number, col: number) =>
+    //   row >= 0 && row < 8 && col >= 0 && col < 8;
   
     // Generate moves based on piece type and color
     switch (piece.type) {
