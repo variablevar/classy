@@ -43,7 +43,7 @@ const ChessPiece: React.FC<ChessPieceProps> = ({ type, color,id }) => {
     <div id={id} className="w-full h-full flex items-center justify-center">
       <img
         draggable='true'
-        src={`/pieces/chess_pieces/${color|type}.png`}
+        src={`/pieces/chess_pieces/${color}${type}.png`}
         alt={`${mapper[color+type]}`}
         className="max-w-full max-h-full"
       />

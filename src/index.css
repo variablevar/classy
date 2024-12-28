@@ -43,8 +43,8 @@
   background-color: var(--accent-color);
 }
 .chess-board {
-  height: 50vh;
-  width: 50vh;
+  height: 40vh;
+  width: 40vh;
   position: relative;
   z-index: 0; /* Establish a stacking context */
 }
